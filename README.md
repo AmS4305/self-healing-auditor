@@ -27,7 +27,7 @@ The auditor analyzes your code for security vulnerabilities, automatically gener
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                 FastAPI Server (:8000)               │
+│                 FastAPI Server (:8000)              │
 │                                                     │
 │   /api/audit (POST)    /api/health (GET)            │
 │         │                                           │
