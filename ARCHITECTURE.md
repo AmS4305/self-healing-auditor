@@ -231,7 +231,7 @@ Both the **Auditor** and **Fixer** nodes use the same model for consistency and 
 │                                                           │
 │  Auditor Role:                                            │
 │  Analyzes code for vulnerabilities using OWASP/CWE        │
-│  standards and returns structured JSON audit reports.      │
+│  standards and returns structured JSON audit reports.     │
 │                                                           │
 │  Fixer Role:                                              │
 │  Applies security patches based on audit findings while   │
@@ -277,7 +277,7 @@ backend/
 │                                                           │
 │  ┌──────────────┐         ┌──────────────┐                │
 │  │  Load        │         │  Uvicorn     │                |
-│  │  Balancer    │───────▶ │  Workers     │                │
+│  │  Balancer    │───────▶ │  Workers    │                │
 │  │  (Nginx)     │         │  (FastAPI)   │                │
 │  └──────────────┘         └──────┬───────┘                │
 │                                   │                       │
