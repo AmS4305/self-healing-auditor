@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self-Healing Code Auditor | NVIDIA NIM Edition</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">🛡️</span>
+          <span>Self-Healing Code Auditor</span>
+        </div>
+        <div class="subtitle">
+          <span class="status-indicator"></span>
+          <span>NVIDIA NIM Edition</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+      <!-- Code Editor Section -->
+      <section class="editor-section">
+        <div class="editor-header">
+          <span class="editor-title">📝 Code Input</span>
+          <div class="editor-actions">
+            <button id="clearBtn" class="btn btn-secondary">🗑️ Clear</button>
+            <button id="analyzeBtn" class="btn btn-primary">
+              🔍 Analyze & Heal
+            </button>
+          </div>
+        </div>
+        <textarea
+          id="codeInput"
+          placeholder="Paste your code here to check for security vulnerabilities...
+
+Example: SQL injection, XSS, authentication flaws, etc.
+
+Press Ctrl+Enter to analyze or click the 'Analyze & Heal' button.
+
+A sample vulnerable Flask API is pre-loaded for demonstration."
+        ></textarea>
+      </section>
+
+      <!-- Loading State -->
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p style="color: var(--text-secondary)">
+          Analyzing code with AI security experts...<br />
+          <small>Auditor & Fixer: meta/llama-3.1-70b-instruct</small>
+        </p>
+      </div>
+
+      <!-- Results Section -->
+      <section id="results" class="results">
+        <!-- Results Header -->
+        <div class="results-header">
+          <div id="statusBadge" class="status-badge">
+            <span id="statusIcon"></span>
+            <span id="statusText"></span>
+          </div>
+          <div class="iteration-count">
+            <strong id="iterationCount">0 iterations</strong>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div id="timeline" class="timeline">
+          <!-- Iteration cards will be dynamically inserted here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Info -->
+    <footer
+      style="
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      "
+    >
+      <p>
+        Powered by
+        <strong style="color: var(--purple-light)">LangGraph</strong> reflection
+        pattern •
+        <strong style="color: var(--purple-light)">FastAPI</strong> backend •
+        <strong style="color: #76b900);">NVIDIA NIM APIs</strong>
+      </p>
+      <p style="margin-top: 0.5rem">
+        🔐 Enterprise-grade security auditing with self-healing capabilities
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
